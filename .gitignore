@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+typescript-complete-course.iml
+node_modules/
+
+bundle.js
+bundle.js.map

@@ -1,22 +1,22 @@
 "use strict";
-//string inferred
+//string type inferred
 var myName = 'Tomcat';
 // myName = 28;
-// number inferred
+// number type inferred
 var myAge = 27;
 // myAge = 'Tomcat';
-// boolean inferred
+// boolean type inferred
 var hasHobbies = false;
 // hasHobbies = 1;
-// assign types explicitly
+// assign type explicitly
 var myRealAge;
 myRealAge = 27;
-// array
+// array type
 var hobbies = ['Cooking', 'Sports'];
 hobbies = [100];
 // tuples -arrays with different types
 var address = ['Superstreet', 99];
-// enum
+// enum type
 var Color;
 (function (Color) {
     Color[Color["Gray"] = 0] = "Gray";
@@ -25,17 +25,17 @@ var Color;
 })(Color || (Color = {}));
 var myColor = Color.Green;
 console.log(myColor);
-// any
+// any type
 var car = 'BMW';
 console.log(car);
 car = { brand: 'BMW', series: 3 };
 console.log(car);
-// functions
+// function type
 function returnMyName() {
     return myName;
 }
 console.log(returnMyName());
-// void
+// void type
 function sayHello() {
     console.log('Hello');
 }
@@ -52,7 +52,7 @@ var myMultiply;
 // myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
-// objects
+// object types
 var userData = {
     name: 'Tomcat',
     age: 27
@@ -61,7 +61,7 @@ var userData = {
 //   a: 'Hello',
 //   b: 22
 // };
-// complex object
+// complex object type
 var complex = {
     data: [100, 3.99, 10],
     output: function (all) {
@@ -78,7 +78,7 @@ var complex2 = {
 var myRealRealAge = 27;
 myRealRealAge = '27';
 // myRealRealAge = true;
-// check types
+// check type
 var finalValue = 30;
 if (typeof finalValue == 'number') {
     console.log('Final value is a number');
@@ -87,7 +87,7 @@ if (typeof finalValue == 'number') {
 function neverReturns() {
     throw new Error('An error');
 }
-// nullable types
+// nullable type
 var canBeNull = 13;
 canBeNull = null;
 console.log(canBeNull);

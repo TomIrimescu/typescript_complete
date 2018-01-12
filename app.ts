@@ -1,27 +1,27 @@
-//string inferred
+//string type inferred
 let myName = 'Tomcat';
 // myName = 28;
 
-// number inferred
+// number type inferred
 let myAge = 27;
 // myAge = 'Tomcat';
 
-// boolean inferred
+// boolean type inferred
 let hasHobbies = false;
 // hasHobbies = 1;
 
-// assign types explicitly
+// assign type explicitly
 let myRealAge: number;
 myRealAge = 27;
 
-// array
+// array type
 let hobbies: any[] = ['Cooking', 'Sports'];
 hobbies = [100];
 
 // tuples -arrays with different types
 let address: [string, number] = ['Superstreet', 99];
 
-// enum
+// enum type
 enum Color {
   Gray, // 0
   Green = 13, // 1
@@ -30,19 +30,19 @@ enum Color {
 let myColor: Color = Color.Green;
 console.log(myColor);
 
-// any
+// any type
 let car: any = 'BMW';
 console.log(car);
 car = { brand: 'BMW', series: 3};
 console.log(car);
 
-// functions
+// function type
 function returnMyName(): string {
   return myName;
 }
 console.log(returnMyName());
 
-// void
+// void type
 function sayHello(): void {
   console.log('Hello');
 }
@@ -62,7 +62,7 @@ let myMultiply: (val1: number, val2: number) => number;
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
 
-// objects
+// object types
 let userData: { name: string, age: number} = {
   name: 'Tomcat',
   age: 27
@@ -72,7 +72,7 @@ let userData: { name: string, age: number} = {
 //   b: 22
 // };
 
-// complex object
+// complex object type
 let complex: {data: number[], output: (all: boolean) => number[]} = {
   data: [100, 3.99, 10],
   
@@ -97,7 +97,7 @@ let myRealRealAge: number | string = 27;
 myRealRealAge = '27';
 // myRealRealAge = true;
 
-// check types
+// check type
 let finalValue = 30;
 if (typeof finalValue == 'number') {
   console.log('Final value is a number');
@@ -108,7 +108,7 @@ function neverReturns():never {
   throw new Error('An error');
 }
 
-// nullable types
+// nullable type
 let canBeNull: number | null = 13;
 canBeNull = null;
 console.log(canBeNull);

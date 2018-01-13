@@ -94,6 +94,18 @@ console.log(canBeNull);
 var canAlsoBeNull;
 console.log(canAlsoBeNull);
 var canThisBeAny = null;
-canThisBeAny = 13;
+// canThisBeAny = 13;
 console.log(typeof (canThisBeAny));
 console.log(canThisBeAny);
+// strictNullChecks
+function controlMe(isTrue, somethingElse) {
+    var result;
+    result = 33;
+    if (isTrue) {
+        result = 12;
+    }
+    return result;
+}
+/*
+console.log(controlMe(true));
+console.log(controlMe(false));*/

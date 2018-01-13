@@ -115,6 +115,8 @@ console.log(canBeNull);
 let canAlsoBeNull;
 console.log(canAlsoBeNull);
 let canThisBeAny = null;
-canThisBeAny = 13;
+// canThisBeAny = 13;
 console.log(typeof(canThisBeAny));
 console.log(canThisBeAny);
+
+

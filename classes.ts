@@ -1,4 +1,5 @@
-class Person {
+// Classes & Inheritance
+/*class Person {
   name: string;
   private type: string;
   protected age: number = 33;
@@ -34,10 +35,11 @@ class Tomcat extends Person {
   }
 }
 const tomcat = new Tomcat("freddy");
-console.log(tomcat);
+console.log(tomcat);*/
 
-/*
+
 // Getters & Setters
+/*
 class Plant {
   private _species: string = "Default";
   
@@ -59,9 +61,11 @@ console.log(plant.species);
 plant.species = "AB";
 console.log(plant.species);
 plant.species = "Green Plant";
-console.log(plant.species);
+console.log(plant.species);*/
+
 
 // Static Properties & Methods
+/*
 class Helpers {
   static PI: number = 3.14;
   static calcCircumference(diameter: number): number {
@@ -69,14 +73,16 @@ class Helpers {
   }
 }
 console.log(2 * Helpers.PI);
-console.log(Helpers.calcCircumference(8));
+console.log(Helpers.calcCircumference(8));*/
 
-// Abstract Classes
+
+// Abstract Classes -need to be extended not instantiated
+/*
 abstract class Project {
   projectName: string = "Default";
   budget: number = 1000;
   
-  abstract changeName(name: string): void;
+  abstract changeName(name: string): void; // no curly braces - no function body -required to implement the function body for this method in the child class
   
   calcBudget() {
     return this.budget * 2;
@@ -93,3 +99,23 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);*/
+
+
+// Private Constructor -Singleton
+/*
+class OnlyOne {
+  private static instance: OnlyOne;
+  
+  private constructor(public name: string) {}
+  
+  static getInstance() {
+    if (!OnlyOne.instance) {
+      OnlyOne.instance  = new OnlyOne('The Only One');
+    }
+    return OnlyOne.instance;
+  }
+}
+
+let wrong = new OnlyOne('The Only One'); // this will cause an error
+let right = OnlyOne.getInstance();
+console.log(right);*/

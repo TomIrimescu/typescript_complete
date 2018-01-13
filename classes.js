@@ -1,49 +1,44 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var Person = /** @class */ (function () {
-    function Person(name, username) {
-        this.username = username;
-        this.age = 33;
-        this.name = name;
-    }
-    Person.prototype.printAge = function () {
-        console.log(this.age);
-        this.setType("Old Guy");
-    };
-    Person.prototype.setType = function (type) {
-        this.type = type;
-        console.log(this.type);
-    };
-    return Person;
-}());
-var person = new Person("Tomcat", "tomcat");
+// Classes & Inheritance
+/*class Person {
+  name: string;
+  private type: string;
+  protected age: number = 33;
+  
+  constructor(name: string, public username: string) {
+    this.name = name;
+  }
+  
+  
+  printAge() {
+    console.log(this.age);
+    this.setType("Old Guy");
+  }
+  
+  private setType(type: string) {
+    this.type = type;
+    console.log(this.type);
+  }
+}
+
+const person = new Person("Tomcat", "tomcat");
 console.log(person.name, person.username);
 person.printAge();
 // person.setType("Cool guy"); // Won't work with private method
+
 // Inheritance
-var Tomcat = /** @class */ (function (_super) {
-    __extends(Tomcat, _super);
-    // name = "Mercury";
-    function Tomcat(username) {
-        var _this = _super.call(this, "Tomcat", username) || this;
-        _this.age = 44;
-        return _this;
-    }
-    return Tomcat;
-}(Person));
-var tomcat = new Tomcat("freddy");
-console.log(tomcat);
-/*
+class Tomcat extends Person {
+   // name = "Mercury";
+  
+  constructor(username: string) {
+    super("Tomcat", username);
+    this.age = 44;
+  }
+}
+const tomcat = new Tomcat("freddy");
+console.log(tomcat);*/
 // Getters & Setters
+/*
 class Plant {
   private _species: string = "Default";
   
@@ -65,9 +60,9 @@ console.log(plant.species);
 plant.species = "AB";
 console.log(plant.species);
 plant.species = "Green Plant";
-console.log(plant.species);
-
+console.log(plant.species);*/
 // Static Properties & Methods
+/*
 class Helpers {
   static PI: number = 3.14;
   static calcCircumference(diameter: number): number {
@@ -75,14 +70,14 @@ class Helpers {
   }
 }
 console.log(2 * Helpers.PI);
-console.log(Helpers.calcCircumference(8));
-
-// Abstract Classes
+console.log(Helpers.calcCircumference(8));*/
+// Abstract Classes -need to be extended not instantiated
+/*
 abstract class Project {
   projectName: string = "Default";
   budget: number = 1000;
   
-  abstract changeName(name: string): void;
+  abstract changeName(name: string): void; // no curly braces - no function body -required to implement the function body for this method in the child class
   
   calcBudget() {
     return this.budget * 2;
@@ -99,3 +94,21 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);*/
+// Private Constructor -Singleton
+/*
+class OnlyOne {
+  private static instance: OnlyOne;
+  
+  private constructor(public name: string) {}
+  
+  static getInstance() {
+    if (!OnlyOne.instance) {
+      OnlyOne.instance  = new OnlyOne('The Only One');
+    }
+    return OnlyOne.instance;
+  }
+}
+
+let wrong = new OnlyOne('The Only One'); // this will cause an error
+let right = OnlyOne.getInstance();
+console.log(right);*/

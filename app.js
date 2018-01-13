@@ -64,13 +64,13 @@ var userData = {
 // complex object type
 var complex = {
     data: [100, 3.99, 10],
-    output: function (all) {
+    output: function () {
         return this.data;
     }
 };
 var complex2 = {
     data: [100, 3.99, 10],
-    output: function (all) {
+    output: function () {
         return this.data;
     }
 };
@@ -97,15 +97,3 @@ var canThisBeAny = null;
 // canThisBeAny = 13;
 console.log(typeof (canThisBeAny));
 console.log(canThisBeAny);
-// strictNullChecks
-function controlMe(isTrue, somethingElse) {
-    var result;
-    result = 33;
-    if (isTrue) {
-        result = 12;
-    }
-    return result;
-}
-/*
-console.log(controlMe(true));
-console.log(controlMe(false));*/

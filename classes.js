@@ -94,12 +94,12 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);*/
-// Private Constructor -Singleton
+// Private Constructor -Singleton & Readonly
 /*
 class OnlyOne {
   private static instance: OnlyOne;
   
-  private constructor(public name: string) {}
+  private constructor(public readonly name: string) {}
   
   static getInstance() {
     if (!OnlyOne.instance) {
@@ -109,6 +109,8 @@ class OnlyOne {
   }
 }
 
-let wrong = new OnlyOne('The Only One'); // this will cause an error
+// let wrong = new OnlyOne('The Only One'); // this will cause an error
 let right = OnlyOne.getInstance();
-console.log(right);*/
+console.log(right.name);
+// right.name = 'Something else'; // public property cannot be overwritten if readonly
+// console.log(right.name);*/
